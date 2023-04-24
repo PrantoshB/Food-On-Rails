@@ -1,0 +1,22 @@
+
+<h1>Foods</h1>
+
+<%= button_to "New food", new_food_path, method: :get %>
+
+<p style="color: green"><%= notice %></p>
+
+<table id="foods">
+  <tr>
+    <th>Food</th>
+    <th>Measurement unit</th>
+    <th>Unit price</th>
+    <th>Actions</th>
+  </tr>
+  <% @foods.each do |food| %>
+    <%= render food %>
+    <p>
+      <%= link_to "Show this food", food %>
+    </p>
+  <% end %>
+</table>
+

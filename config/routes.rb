@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root "foods#index"
-  resources :foods, only: [:index, :new, :create, :destroy]
+  resources :foods, only: [:index, :show, :new, :create, :destroy]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

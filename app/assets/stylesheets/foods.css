@@ -1,11 +1,11 @@
-table#foods, 
-table#foods th, 
+table#foods,
+table#foods th,
 table#foods td {
   border: 1px solid black;
   border-collapse: collapse;
 }
 
-table#foods th, 
+table#foods th,
 table#foods td {
   min-width: 90px;
 }

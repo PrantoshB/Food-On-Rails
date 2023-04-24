@@ -1,0 +1,8 @@
+<% @recipes.each do |recipe| %>
+  <div>
+    <h3><%= recipe.name %></h3>
+    <%= button_to "Remove", recipe, method: :delete, class: 'remove-recipe-link' %>
+    <p><%= recipe.description %></p>
+
+  </div>
+<% end %>

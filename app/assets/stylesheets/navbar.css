@@ -1,26 +1,27 @@
-.navbar, .navbar-inner, .nav{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.navbar,
+.navbar-inner,
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-.nav li{
-    list-style: none;
-    margin-right: 2rem;
+.nav li {
+  list-style: none;
+  margin-right: 2rem;
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.logout-btn{
-    background-color: rgb(254, 51, 51);
-    color: white;
-    border: 0;
-    font-size: 0.7rem;
-    border-radius: 2px;
-    width: 5rem;
-    height: 1.2rem;
+.logout-btn {
+  background-color: rgb(254, 51, 51);
+  color: white;
+  border: 0;
+  font-size: 0.7rem;
+  border-radius: 2px;
+  width: 5rem;
+  height: 1.2rem;
 }

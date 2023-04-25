@@ -3,14 +3,16 @@
 <ul>
   <% @public_recipes.each do |recipe| %>
     <li class="row">
-      <div>
-        <h3><%= recipe.name %></h3>
-        <p>by: <%= recipe.user.name %></p>
-      </div>
-      <div>
-        <h3>Total food: <%= 3 %></h3>
-        <p>Total price: <%= 250 %>$</p>
-      </div>
+      <a href=<%= "recipes/#{recipe.id}" %>>      
+        <div>
+          <h3><%= recipe.name %></h3>
+          <p>by: <%= recipe.user.name %></p>
+        </div>
+        <div>
+          <h3>Total food: <%= recipe.recipe_food.length %></h3>
+          <p>Total price: <%= RecipeFood.total_price(recipe.recipe_food) %>$</p>
+        </div>
+      </a>
     </li>
   <% end %>
 </ul>

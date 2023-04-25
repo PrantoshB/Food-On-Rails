@@ -12,7 +12,7 @@ class RecipeFood < ApplicationRecord
   end
 
   def self.total_price(recipe_foods)
-    recipe_foods.reduce(0) { |sum, recipe_food| sum += recipe_food.value }
+    recipe_foods.reduce(0) { |sum, recipe_food| sum + recipe_food.value }
   end
 
   def self.shopping_list(user)
@@ -24,8 +24,8 @@ class RecipeFood < ApplicationRecord
 
     shop_list = []
     recipe_foods.each do |recipe_food|
-      food = user_foods.select { |el| el.id === recipe_food.food_id }
-      if food.length === 1
+      food = user_foods.select { |el| el.id == recipe_food.food_id }
+      if food.length == 1
         food = food[0]
         recipe_food.quantity -= food.quantity if food
         recipe_food.price *= recipe_food.quantity

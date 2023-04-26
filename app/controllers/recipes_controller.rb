@@ -11,6 +11,10 @@ class RecipesController < ApplicationController
   def show
     @recipe = Recipe.includes(:recipe_food).find(params[:id])
     @ingredients = @recipe.recipe_food.where(recipe: @recipe)
+
+    return unless cannot? :manage, @recipe
+
+    redirect_to '/'
   end
 
   # GET /recipes/new

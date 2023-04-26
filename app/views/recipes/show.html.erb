@@ -33,7 +33,9 @@
 
 <% end %>
 
-<button>Generate shopping list</button>
+<a href= <%= "/general_shopping_list" %>>
+  <button>Generate shopping list</button>
+</a>
 
 
 <a href= <%= "/recipes/#{@recipe.id}/recipe_foods/new" %>>
@@ -47,8 +49,8 @@
   <p><%= recipe_food.quantity %></p>
   <p><%= recipe_food.value %></p>
 
-<%= link_to "Modify", edit_recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id) %>
-    <%= button_to "Remove", recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), method: :delete %>
+  <%= link_to "Modify", edit_recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id) %>
+  <%= button_to "Remove", recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), method: :delete %>
 
 </div>
 <% end %>

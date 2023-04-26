@@ -1,10 +1,9 @@
 <% @recipes.each do |recipe| %>
   <div>
-<a href=" recipes/<%=recipe.id %>">
-<h1> <%= recipe.name %></h1>
-</a>
-    <%= button_to "Remove", recipe, method: :delete, class: 'remove-recipe-link' %>
-    <p><%= recipe.description %></p>
-
+    <a href=" recipes/<%=recipe.id %>">
+      <h4> <%= recipe.name %></h4>
+      <%= button_to "Remove", recipe, method: :delete, class: 'remove-recipe-link' %>
+      <p><%= recipe.description %></p>
+    </a>
   </div>
 <% end %>

@@ -12,9 +12,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.includes(:recipe_food).find(params[:id])
     @ingredients = @recipe.recipe_food.where(recipe: @recipe)
 
-    return unless cannot? :manage, @recipe
-
-    redirect_to '/'
+    redirect_to '/not_accessible' if cannot? :manage, @recipe
   end
 
   # GET /recipes/new
@@ -49,6 +47,7 @@ class RecipesController < ApplicationController
 
   # DELETE /recipes/1 or /recipes/1.json
   def destroy
+    RecipeFood.destroy_by(recipe: @recipe)
     @recipe.destroy
 
     respond_to do |format|
@@ -61,7 +60,8 @@ class RecipesController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_recipe
-    @recipe = Recipe.find(params[:id])
+    @recipe = Recipe.find_by(id: params[:id])
+    redirect_to '/not_found' if @recipe.nil?
   end
 
   # Only allow a list of trusted parameters through.

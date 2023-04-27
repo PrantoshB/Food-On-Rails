@@ -11,7 +11,7 @@ RSpec.describe FoodsController, type: :system do
 
   it 'can see the food index page' do
     authentificate_test_user
-    expect(page).to have_content("Signed in successfully.")
+    expect(page).to have_content("Log Out")
     visit '/foods'
     
     expect(page).to have_content(@food.name)
@@ -22,7 +22,7 @@ RSpec.describe FoodsController, type: :system do
 
   it 'Btn add food should navigate to new' do
     authentificate_test_user
-    expect(page).to have_content("Signed in successfully.")
+    expect(page).to have_content("Log Out")
     visit '/foods'
     click_button 'Add Food'
 

@@ -1,11 +1,11 @@
 
-<h1>Foods</h1>
+<%= render partial: "shared/heading_text" %>
 
-<%= button_to "New food", new_food_path, method: :get %>
+<%= button_to "New food", new_food_path, method: :get, class:"btn-bg-red-big" %>
 
 <p style="color: green"><%= notice %></p>
 
-<table id="foods">
+<table class="table">
   <tr>
     <th>Food</th>
     <th>Measurement unit</th>

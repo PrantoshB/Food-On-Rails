@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   end
   resources :foods, only: [:index, :show, :new, :create, :destroy]
   get "public_recipes", to: "public_recipes#index"
+  get '*path', to: 'errors#not_found'
+  get 'errors/not_accessible'
 end

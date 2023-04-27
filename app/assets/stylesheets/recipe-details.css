@@ -1,0 +1,36 @@
+.recipe-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-group {
+  gap: 2rem;
+}
+
+.recipe-details-container .btn-group {
+  margin: 2rem 0;
+}
+
+.details-and-public-togl {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.recipe-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: 70%;
+}
+
+.switch-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

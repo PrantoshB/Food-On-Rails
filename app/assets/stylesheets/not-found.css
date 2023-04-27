@@ -17,25 +17,6 @@
   text-align: left;
 }
 
-.right h1 {
-  font-size: 5rem;
-  letter-spacing: 5px;
-}
-
-.right h2 {
-  font-size: 1.8rem;
-  letter-spacing: 6px;
-  font-weight: 500;
-  word-spacing: 10px;
-}
-
-.right p {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: var(--color-text-gray);
-  margin: 4% 0;
-}
-
 #heading-red {
   color: var(--color-text-red);
 }

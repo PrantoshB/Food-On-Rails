@@ -58,12 +58,13 @@ body {
 
 .btn-bg-transparent {
   border-radius: 50px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
-  color: var(--color-text-red);
+  color: var(--color-primary);
   background-color: transparent;
-  padding: 8px 32px 8px 32px;
-  border: 3px solid var(--color-text-red);
+  padding: 6px 32px 6px 32px;
+  border: 3px solid var(--color-primary);
+  transition-duration: 400ms;
 }
 
 .btn-bg-transparent:hover {
@@ -202,6 +203,18 @@ body {
   align-items: center;
 }
 
+.bg-plate {
+  width: 350px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("heading_left.png")
+}
+
 .bg-plate-reversed {
   position: fixed;
   width: 350px;
@@ -213,4 +226,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("heading_right.png")
+}
+
+.text-description {
+  color: var(--color-text-gray-light);
+  margin-top: 18px;
+  margin-bottom: 24px;
 }

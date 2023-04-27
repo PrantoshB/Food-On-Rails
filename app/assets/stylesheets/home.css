@@ -1,0 +1,24 @@
+.home {
+  min-height: 100vh;
+}
+
+.home-wrapper {
+  position: relative;
+  min-height: 100vh;
+  align-items: flex-end;
+}
+
+.home .heading-text {
+  max-width: 400px;
+  margin-top: 100px;
+  margin-right: 20px;
+}
+
+.home .heading-text h1 {
+  font-size: 3.5rem;
+  color: var(--color-text-black);
+}
+
+.home .heading-text a {
+  margin-right: 16px;
+}

@@ -201,3 +201,16 @@ body {
   display: flex;
   align-items: center;
 }
+
+.bg-plate-reversed {
+  position: fixed;
+  width: 350px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("heading_right.png")
+}

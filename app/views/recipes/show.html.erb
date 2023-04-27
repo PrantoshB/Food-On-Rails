@@ -21,6 +21,7 @@
 
 </div>
 
+<% if can? :destroy , @recipe %>
 <%= form_for @recipe, method: :patch do |f| %>
 <div class="swith-btn">
   <p>Public : </p>
@@ -30,17 +31,18 @@
     <span class="slider round"></span>
   </label>
 </div>
-
+<% end %>
 <% end %>
 
-<button>Generate shopping list</button>
 
-
+<% if can? :destroy , @recipe %>
+<a href= <%= "/general_shopping_list" %>>
+  <button>Generate shopping list</button>
+</a>
 <a href= <%= "/recipes/#{@recipe.id}/recipe_foods/new" %>>
 <button>Add ingredient</button>
 </a>
-
-
+<% end %>
 
 <table id="foods">
   <thead>
@@ -58,8 +60,10 @@
           <td><%= recipe_food.quantity %> <%= recipe_food.food.measurement_unit %></td>
           <td>$ <%= recipe_food.value %></td>
           <td class="d-flex gap-2">
-           <%= link_to "Modify", edit_recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id) %>
-    <%= button_to "Remove", recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), method: :delete %>
+          <% if can? :destroy , @recipe %>
+            <%= link_to "Modify", edit_recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id) %>
+            <%= button_to "Remove", recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), method: :delete %>
+          <% end %>
           </td>
       </tr>
     <% end %>

@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get "public_recipes", to: "public_recipes#index"
   get '*path', to: 'errors#not_found'
   get 'errors/not_accessible'
+  get "general_shopping_list", to: "general_shopping_list#index"
 end

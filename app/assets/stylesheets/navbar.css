@@ -25,3 +25,8 @@ a {
   width: 5rem;
   height: 1.2rem;
 }
+
+.navbar img {
+  width: 34px;
+  height: 34px;
+}

@@ -1,19 +1,23 @@
+<div class="row max-width food-heading">
+  <%= render partial: "shared/heading_text" %>
+  <%= button_to "Add food", new_food_path, method: :get, class:"btn-bg-red-big" %>
+</div>
 
-<%= render partial: "shared/heading_text" %>
+<p class="notice"><%= notice %></p>
 
-<%= button_to "New food", new_food_path, method: :get, class:"btn-bg-red-big" %>
+<div class="max-width flex-center food-table-wrapper">
+  <table class="table">
+    <tr>
+      <th>Food</th>
+      <th>Measurement unit</th>
+      <th>Unit price</th>
+      <th>Actions</th>
+    </tr>
+    <% @foods.each do |food| %>
+      <%= render food %>
+    <% end %>
+    <%= render partial: "shared/empty_list", locals: {list: @foods} %>
 
-<p style="color: green"><%= notice %></p>
-
-<table class="table">
-  <tr>
-    <th>Food</th>
-    <th>Measurement unit</th>
-    <th>Unit price</th>
-    <th>Actions</th>
-  </tr>
-  <% @foods.each do |food| %>
-    <%= render food %>
-  <% end %>
-</table>
+  </table>
+</div>
 

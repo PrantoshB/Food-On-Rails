@@ -71,7 +71,7 @@ input:checked + .slider::before {
   gap: 1rem;
 }
 
-.btns button{
+.btns button {
   display: flex;
   align-items: center;
   height: 28px;

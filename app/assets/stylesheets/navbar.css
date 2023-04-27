@@ -7,7 +7,8 @@
   z-index: 100;
 }
 
-.navbar-inner, .nav {
+.navbar-inner,
+.nav {
   display: flex;
   align-items: center;
 }

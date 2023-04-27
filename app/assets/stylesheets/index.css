@@ -45,7 +45,7 @@ body {
   text-decoration: none;
   border: none;
   background-color: transparent;
-} 
+}
 
 .input-default {
   min-width: 233px;
@@ -163,7 +163,7 @@ body {
   min-height: 120px;
   padding: 16px 24px;
   margin-bottom: 24px;
-  border: 0.8px solid #D3D3D3;
+  border: 0.8px solid #d3d3d3;
   border-radius: 4px;
   box-shadow: 2px 2px 3px rgba(120, 121, 121, 0.3);
 }
@@ -172,7 +172,6 @@ body {
   max-width: 500px;
   margin-right: 60px;
 }
-
 
 .heading-text h1 {
   font-size: 3rem;
@@ -217,6 +216,7 @@ body {
   color: var(--color-text-black);
   margin-bottom: 12px;
 }
+
 .add-form-margin label {
   font-size: 1.3rem;
   margin-top: 12px;
@@ -240,7 +240,7 @@ body {
   background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("heading_left.png")
+  background-image: url("heading_left.png");
 }
 
 .bg-plate-reversed {
@@ -253,7 +253,7 @@ body {
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("heading_right.png")
+  background-image: url("heading_right.png");
 }
 
 .text-description {
@@ -261,6 +261,7 @@ body {
   margin-top: 18px;
   margin-bottom: 24px;
 }
+
 .main-h1 {
   font-size: 4rem;
   letter-spacing: 5px;

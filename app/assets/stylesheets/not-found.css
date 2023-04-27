@@ -1,20 +1,19 @@
 .not-found {
   width: 100vw;
   height: 100vh;
-  background-image: url(/assets/heading_left.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left;
-  padding: 2% 0 0 45%;
+  padding: 24px 10%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .right {
-  width: 65%;
+  width: 450px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: left;
+  margin-left: 60px;
 }
 
 #heading-red {

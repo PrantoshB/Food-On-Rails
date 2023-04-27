@@ -1,9 +1,10 @@
-<section class="recipe-details-container">
+<%= render 'layouts/navbar' %> 
 
+<section class="recipe-details-container">
   
   <div class="heading-text">
-    <h1> <%= @recipe.name %></h1>
-</div>
+      <h1> <%= @recipe.name %></h1>
+  </div>
 
 
 <div class="details-and-public-togl">
@@ -65,9 +66,9 @@
           <td>$ <%= recipe_food.value %></td>
           <td>
           <% if can? :destroy , @recipe %>
-          <div class="row btn-group">
+          <div class="row btns">
             <%= link_to "Modify", edit_recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), class: "btn-text" %>
-            <%= link_to "Remove", recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), class: "btn-text color-red", method: :delete %>
+            <%= button_to "Remove", recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), class: "no-styling btn-text color-red", method: :delete %>
           </div>
           <% end %>
           </td>

@@ -61,3 +61,18 @@ input:checked + .slider::before {
   cursor: text;
   margin-bottom: 24px;
 }
+
+.recipe-details-container .table th:first-child {
+  width: 40%;
+  min-width: 40%;
+}
+
+.recipe-details-container .btns {
+  gap: 1rem;
+}
+
+.btns button{
+  display: flex;
+  align-items: center;
+  height: 28px;
+}

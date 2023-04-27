@@ -1,8 +1,11 @@
+<%= render 'layouts/navbar' %> 
 
 <section class="flex-center column public-recipes recipes">
-  <div class="row max-width food-heading">
-    <%= render partial: "shared/heading_text" %>
-    <%= button_to "Add Recipes", new_recipe_path, method: :get, class:"btn-bg-red-big" %>
+  <div class="max-width flex-center">
+    <div class="row food-heading">
+      <%= render partial: "shared/heading_text" %>
+      <%= button_to "Add Recipes", new_recipe_path, method: :get, class:"btn-bg-red-big" %>
+    </div>
   </div>
 
   <p class="notice"><%= notice %></p>

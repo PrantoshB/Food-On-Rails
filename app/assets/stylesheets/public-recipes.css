@@ -13,3 +13,12 @@
 .public-recipe {
   justify-content: space-between;
 }
+
+.public-recipe .btns {
+  justify-content: space-between;
+}
+
+.public-recipe .btns a,
+.public-recipe .btns button {
+  margin-right: 16px;
+}

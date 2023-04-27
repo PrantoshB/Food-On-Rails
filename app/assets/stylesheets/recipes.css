@@ -56,3 +56,8 @@ input:checked + .slider::before {
 .slider.round::before {
   border-radius: 50%;
 }
+
+.recipes .txt-list-recipes {
+  cursor: text;
+  margin-bottom: 24px;
+}

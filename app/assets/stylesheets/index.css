@@ -40,12 +40,12 @@ body {
 }
 
 .no-styling {
-  color: var(--color-text-gray);
+  color: var(--color-text-black);
   list-style: none;
   text-decoration: none;
   border: none;
   background-color: transparent;
-}
+} 
 
 .input-default {
   padding: 8px 12px;

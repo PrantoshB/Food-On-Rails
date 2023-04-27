@@ -43,15 +43,16 @@ body {
 }
 
 .input-default {
-  padding: 16px 24px 16px 24px;
-  border: 2px solid var(--color-text-gray);
+  padding: 8px 12px;
+  border: 1.4px solid var(--color-text-gray);
   color: var(--color-text-black);
   outline: 0;
-  margin-bottom: 28px;
+  margin-bottom: 16px;
+  border-radius: 6px;
 }
 
 .input-default:focus {
-  outline: 2px solid var(--color-text-red);
+  border: 2px solid var(--color-text-red);
   color: var(--color-text-red);
 }
 
@@ -183,4 +184,20 @@ body {
 .notice {
   padding: 12px;
   color: #11a721;
+}
+
+.add-form-margin {
+  margin-top: 24px;
+  margin-left: 24px;
+}
+
+.add-form-margin h1 {
+  margin-bottom: 12px;
+}
+
+.btn-back {
+  margin: 8px;
+  color: var(--color-text-red);
+  display: flex;
+  align-items: center;
 }

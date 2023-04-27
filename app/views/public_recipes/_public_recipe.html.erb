@@ -1,0 +1,10 @@
+<a href=<%= "recipes/#{recipe.id}" %> class="card row-wrap public-recipe">  
+  <div>
+    <h3><%= recipe.name %></h3>
+    <p>by: <span class="btn-text color-red"><%= recipe.user.name %></span></p>
+  </div>
+  <div>
+    <h4>Total food: <%= recipe.recipe_food.length %></h4>
+    <h4>Total price: <%= RecipeFood.total_price(recipe.recipe_food) %>$</h4>
+  </div>
+</a>

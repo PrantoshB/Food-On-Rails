@@ -25,6 +25,11 @@ body {
   display: flex;
 }
 
+.row-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .column {
   display: flex;
   flex-direction: column;
@@ -149,8 +154,11 @@ body {
 
 
 .card {
-  min-width: 300px;
-  min-height: 300px;
+  width: 100%;
+  min-width: 400px;
+  min-height: 120px;
+  padding: 16px 24px;
+  margin-bottom: 24px;
   border: 0.8px solid #D3D3D3;
   border-radius: 4px;
   box-shadow: 2px 2px 3px rgba(120, 121, 121, 0.3);

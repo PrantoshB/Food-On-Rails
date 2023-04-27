@@ -15,6 +15,18 @@
   </div>
 </section>
 
-<section class="column public-recipes">
-<h2>Public Recipes</h2>
+<section class="flex-center column public-recipes">
+  <h2>Public Recipes</h2>
+  <ul class="max-width flex-center column">
+    <% @public_recipes.each do |recipe| %>
+      <li class="row">
+        <%= render partial:"public_recipes/public_recipe", locals: {recipe: recipe} %>
+      </li>
+    <% end %>
+  </ul>
 </section>
+
+<footer class="max-width row footer">
+  <h6>All right reserved</h6>
+  <h6>Prantosh & Allassane</h6>
+</footer>

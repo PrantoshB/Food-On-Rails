@@ -1,21 +1,24 @@
-<p style="color: green"><%= notice %></p>
+<section class="recipe-details-container">
 
-<a href="<%=@recipe.id %>">
-<h1> <%= @recipe.name %></h1>
-</a>
-
-
-<div>
-
-  <p>
-    Preparation Time: <%= @recipe.preparation_time %> hour
-  </p>
   
-<p>
-  Cooking Time: <%= @recipe.cooking_time %> hour
-</p>
+  <div class="heading-text">
+    <h1> <%= @recipe.name %></h1>
+</div>
 
-<p>
+
+<div class="details-and-public-togl">
+
+<div class="recipe-details">
+
+  <h2 class="main-h2">
+    Preparation Time: <%= @recipe.preparation_time %> hour
+  </h2>
+  
+  <h2 class="main-h2">
+    Cooking Time: <%= @recipe.cooking_time %> hour
+  </h2>
+
+  <p class="main-p">
   <%= @recipe.description %>
 </p>
 
@@ -23,8 +26,8 @@
 
 <% if can? :destroy , @recipe %>
 <%= form_for @recipe, method: :patch do |f| %>
-<div class="swith-btn">
-  <p>Public : </p>
+<div class="switch-btn">
+  <p class="main-p">Public : </p>
   <label class="switch">
   <div><%= f.submit "" %></div>
     <%= f.check_box :public, { checked: @recipe.public } %>
@@ -34,39 +37,43 @@
 <% end %>
 <% end %>
 
+</div>
 
 <% if can? :destroy , @recipe %>
+<div class="btn-group row">
 <a href= <%= "/general_shopping_list" %>>
-  <button>Generate shopping list</button>
+  <button class="btn-bg-red-big ">Generate shopping list</button>
 </a>
 <a href= <%= "/recipes/#{@recipe.id}/recipe_foods/new" %>>
-<button>Add ingredient</button>
+  <button class="btn-bg-red-big ">Add ingredient</button>
 </a>
+</div>
 <% end %>
 
-<table id="foods">
-  <thead>
+<table class="table">
     <tr>
-      <th scope="col">Food</th>
-      <th scope="col">Quantity</th>
-      <th scope="col">Value</th>
-      <th scope="col">Actions</th>
+      <th>Food</th>
+      <th>Quantity</th>
+      <th>Value</th>
+      <th>Actions</th>
     </tr>
-  </thead>
-    <tbody>
+  
     <% @recipe.recipe_food.each do |recipe_food| %>
-      <tr>
+
           <td><%= recipe_food.food.name %></td>
           <td><%= recipe_food.quantity %> <%= recipe_food.food.measurement_unit %></td>
           <td>$ <%= recipe_food.value %></td>
-          <td class="d-flex gap-2">
+          <td>
           <% if can? :destroy , @recipe %>
-            <%= link_to "Modify", edit_recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id) %>
-            <%= button_to "Remove", recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), method: :delete %>
+          <div class="row btn-group">
+            <%= link_to "Modify", edit_recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), class: "btn-text" %>
+            <%= link_to "Remove", recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), class: "btn-text color-red", method: :delete %>
+          </div>
           <% end %>
           </td>
-      </tr>
+
     <% end %>
-  </tbody>
 </table>
 
+
+</section>

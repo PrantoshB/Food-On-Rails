@@ -1,0 +1,22 @@
+.not-found {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/assets/heading_left.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  padding: 2% 0 0 45%;
+}
+
+.right {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+#heading-red {
+  color: var(--color-text-red);
+}

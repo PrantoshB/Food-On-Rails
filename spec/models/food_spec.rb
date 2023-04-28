@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe Food do
   before(:all) do
-    @food = Food.first
-    @food ||= Food.create(name: 'Salt', measurement_unit: 'gram', price: 1, quantity: 3)
     @user = User.first
     @user ||= User.create(name: 'Prantosh')
+    @food = Food.first
+    @food ||= Food.create(name: 'Salt', measurement_unit: 'gram', price: 1, quantity: 3, user: @user)
   end
   
   it 'should have a name' do

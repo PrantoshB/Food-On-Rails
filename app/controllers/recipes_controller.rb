@@ -12,7 +12,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.includes(:recipe_food).find(params[:id])
     @ingredients = @recipe.recipe_food.where(recipe: @recipe)
 
-    redirect_to '/not_accessible' if cannot? :manage, @recipe
+    redirect_to '/not_accessible' if (cannot? :manage, @recipe) && @recipe.public == false
   end
 
   # GET /recipes/new

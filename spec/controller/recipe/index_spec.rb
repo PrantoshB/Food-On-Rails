@@ -1,32 +1,34 @@
 require 'rails_helper'
-require_relative '../spec_support_helpers'
 
 RSpec.describe RecipesController, type: :system do
-  before(:each) do
-    authentificate_test_user
-    expect(page).to have_content("Signed in successfully.")
+  before(:all) do
+    user = authentificate_test_user
+    @recipe = Recipe.first
+    @recipe ||= Recipe.create(name: 'Pizza Recipe', description: 'Salt', 
+      preparation_time: 10, cooking_time: 3, public: true, user: user)
   end
 
-  it 'can see the recipe new page' do
+  it 'can see the recipe index page with recipe elements' do
     authentificate_test_user
-    expect(page).to have_content("Signed in successfully.")
-    visit '/recipes/new'
-    expect(page).to have_content("New Recipe")
-  end
-
-  it 'can submit recipe form' do
-    authentificate_test_user
-    expect(page).to have_content("Signed in successfully.")
-    visit '/recipes/new'
-    fill_in 'Name', with: 'Tomato'
-    fill_in 'Description', with: 'Tomato'
-    fill_in 'Preparation time', with: 10
-    fill_in 'Cooking time', with: 3
-    click_button 'Create Recipe'
-    expect(page).to have_content("Recipe was successfully created.")
-
-    # new recipe is visible in recipe#index
+    expect(page).to have_content("Log Out")
     visit '/recipes'
-    expect(page).to have_content("Tomato")
+    expect(page).to have_content('List Recipes')
+  end
+
+  it 'can see recipe elements' do
+    authentificate_test_user
+    expect(page).to have_content("Log Out")
+    visit '/recipes'
+    expect(page).to have_content(@recipe.name)
+    expect(page).to have_content(@recipe.description)
+  end
+
+  it 'Btn add recipe should navigate to new' do
+    authentificate_test_user
+    expect(page).to have_content("Log Out")
+    visit '/recipes'
+    click_button 'Add Recipe'
+
+    expect(has_current_path?("/recipes/new", wait: 5)).to be_truthy
   end
 end

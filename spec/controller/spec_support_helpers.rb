@@ -16,7 +16,7 @@ def authentificate_test_user #(current_user)
     fill_in 'Email*', with: user.email
     fill_in 'Password*', with: 'testPassword'
     fill_in 'Password Confirmation*', with: 'testPassword'
-    click_button 'Sign up'
+    click_button 'Join Us Now !'
   end
 
   user

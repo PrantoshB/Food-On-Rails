@@ -21,8 +21,12 @@
       <p class="text-description">Our community of +20 users that share a passion for fast and healthy can guide you during your journey of discovering more than +100 public recipes around the world.</p>
       
       <div class="row">
-        <%= link_to "Join Us Now!", new_user_registration_path, class: "btn-bg-transparent" %>
-        <%= link_to "Log in", new_user_session_path, class: "btn-bg-transparent" %>
+        <% unless current_user %>
+          <%= link_to "Join Us Now!", new_user_registration_path, class: "btn-bg-transparent" %>
+          <%= link_to "Log in", new_user_session_path, class: "btn-bg-transparent" %>
+        <% else %>
+          <%= link_to "Start Adding Food", foods_path, class: "btn-bg-transparent" %>
+        <% end %>
       </div>
     </div>
   </div>

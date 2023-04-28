@@ -57,8 +57,8 @@
       <th>Value</th>
       <th>Actions</th>
     </tr>
-    <tr>
     <% @recipe.recipe_food.each do |recipe_food| %>
+      <tr>
           <td><%= recipe_food.food.name %></td>
           <td><%= recipe_food.quantity %> <%= recipe_food.food.measurement_unit %></td>
           <td>$ <%= recipe_food.value %></td>
@@ -70,8 +70,8 @@
           </div>
           <% end %>
           </td>
+      </tr>
     <% end %>
-    </tr>
     <%= render partial: "shared/empty_list", locals: {list: @recipe.recipe_food} %>
 
 </table>

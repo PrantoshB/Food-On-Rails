@@ -10,7 +10,7 @@ RSpec.describe Recipe, type: :system do
     @food = Food.first
     @food ||= Food.create(name: 'Salt', measurement_unit: 'gram', price: 1, quantity: 3, user: user)
 
-    @ingredient = RecipeFood.where(recipe: @recipe).first
+    @ingredient = RecipeFood.first
     @ingredient ||= RecipeFood.create(recipe: @recipe, food: @food, quantity: 1)
   end
 
@@ -54,17 +54,9 @@ RSpec.describe Recipe, type: :system do
     authentificate_test_user
     expect(page).to have_content("Log Out")
     visit "/recipes/#{@recipe.id}"
-    click_link 'Modify'
-
+    find('.btn-modify', match: :first).click
+    
     expect(has_current_path?("/recipes/#{@recipe.id}/recipe_foods/#{@ingredient.id}/edit", wait: 5)).to be_truthy
   end
-  
-  it 'Btn edit should navigate to edit' do
-    authentificate_test_user
-    expect(page).to have_content("Log Out")
-    visit "/recipes/#{@recipe.id}"
-    click_link 'Modify'
 
-    expect(has_current_path?("/recipes/#{@recipe.id}/recipe_foods/#{@ingredient.id}/edit", wait: 5)).to be_truthy
-  end
 end

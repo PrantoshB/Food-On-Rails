@@ -65,7 +65,7 @@
           <td>
           <% if can? :destroy , @recipe %>
           <div class="row btns">
-            <%= link_to "Modify", edit_recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), class: "btn-text" %>
+            <%= link_to "Modify", edit_recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), class: "btn-text btn-modify" %>
             <%= button_to "Remove", recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), class: "no-styling btn-text color-red", method: :delete %>
           </div>
           <% end %>

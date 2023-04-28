@@ -25,7 +25,7 @@
 
 # 🥙 Food On Rails <a name="about-project"></a>
 
-Food-On-Rails is a website that allows users to manage their food inventory and create and publish recipes. Authentication and authorization are implemented using the Devise and CanCanCan gems respectively. Built with Ruby programming language and PostgreSql database. The website provides an intuitive interface for users to easily add food items to their inventory and create and share recipes with others. It's a perfect solution for food enthusiasts looking to organize their ingredients and discover new recipes.
+Food-On-Rails is a website that allows users to manage their food inventory and create and publish recipes. Authentication and authorization are implemented using the Devise and CanCanCan gems respectively. Built with Ruby On Rails programming language and PostgreSql database. The website provides an intuitive interface for users to easily add food items to their inventory and create and share recipes with others. It's a perfect solution for food enthusiasts looking to organize their ingredients and discover new recipes.
 
 ## 🛠 Built With <a name="built-with"></a>
 

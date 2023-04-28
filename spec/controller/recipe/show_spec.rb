@@ -49,4 +49,22 @@ RSpec.describe Recipe, type: :system do
 
     expect(has_current_path?("/general_shopping_list", wait: 5)).to be_truthy
   end
+
+  it 'Btn edit should navigate to edit' do
+    authentificate_test_user
+    expect(page).to have_content("Log Out")
+    visit "/recipes/#{@recipe.id}"
+    click_link 'Modify'
+
+    expect(has_current_path?("/recipes/#{@recipe.id}/recipe_foods/#{@ingredient.id}/edit", wait: 5)).to be_truthy
+  end
+  
+  it 'Btn edit should navigate to edit' do
+    authentificate_test_user
+    expect(page).to have_content("Log Out")
+    visit "/recipes/#{@recipe.id}"
+    click_link 'Modify'
+
+    expect(has_current_path?("/recipes/#{@recipe.id}/recipe_foods/#{@ingredient.id}/edit", wait: 5)).to be_truthy
+  end
 end

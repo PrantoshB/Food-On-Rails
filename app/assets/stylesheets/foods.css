@@ -1,11 +1,13 @@
-table#foods,
-table#foods th,
-table#foods td {
-  border: 1px solid black;
-  border-collapse: collapse;
+.food-heading {
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 80%;
 }
 
-table#foods th,
-table#foods td {
-  min-width: 90px;
+.food-table-wrapper {
+  margin-top: 60px;
+}
+
+.food-table-wrapper .table {
+  width: 80%;
 }

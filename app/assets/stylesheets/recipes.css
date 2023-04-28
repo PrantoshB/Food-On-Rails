@@ -1,8 +1,8 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 50px;
-  height: 25px;
+  width: 60px;
+  height: 30px;
 }
 
 .switch input {
@@ -26,17 +26,17 @@
 .slider::before {
   position: absolute;
   content: "";
-  height: 22px;
-  width: 22px;
-  left: 1px;
-  bottom: 1.5px;
+  height: 27px;
+  width: 27px;
+  left: 4px;
+  bottom: 1.8px;
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: green;
+  background-color: var(--color-text-red);
 }
 
 input:focus + .slider {
@@ -55,4 +55,24 @@ input:checked + .slider::before {
 
 .slider.round::before {
   border-radius: 50%;
+}
+
+.recipes .txt-list-recipes {
+  cursor: text;
+  margin-bottom: 24px;
+}
+
+.recipe-details-container .table th:first-child {
+  width: 40%;
+  min-width: 40%;
+}
+
+.recipe-details-container .btns {
+  gap: 1rem;
+}
+
+.btns button {
+  display: flex;
+  align-items: center;
+  height: 28px;
 }

@@ -1,4 +1,5 @@
-def authentificate_test_user #(current_user)
+# (current_user)
+def authentificate_test_user
   # Your code here
 
   user = User.find_by(email: 'testemail@gmail.com')
@@ -20,4 +21,3 @@ def authentificate_test_user #(current_user)
   end
   user
 end
-

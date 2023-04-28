@@ -7,7 +7,7 @@ RSpec.describe Food do
     @food = Food.first
     @food ||= Food.create(name: 'Salt', measurement_unit: 'gram', price: 1, quantity: 3, user: @user)
   end
-  
+
   it 'should have a name' do
     @food.name = nil
     expect(@food).to_not be_valid
@@ -32,5 +32,4 @@ RSpec.describe Food do
     @food.user = nil
     expect(@food).to_not be_valid
   end
-  
 end

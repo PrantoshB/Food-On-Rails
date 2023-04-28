@@ -9,7 +9,7 @@ RSpec.describe RecipeFood, type: :model do
     @food ||= Food.create(name: 'Salt', measurement_unit: 'gram', price: 2, quantity: 3, user_id: @user.id)
     @recipe = Recipe.first
     @recipe ||= Recipe.create(name: 'Pasta', preparation_time: 3, cooking_time: 1, description: 'You know how',
-                            public: true, user_id: @user.id)
+                              public: true, user_id: @user.id)
     @recipe_food = RecipeFood.includes(:food).first
     @recipe_food ||= RecipeFood.create(quantity: 10, food_id: @food.id, recipe_id: @recipe.id)
   end

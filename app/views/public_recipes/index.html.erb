@@ -1,18 +1,12 @@
-<h2>Public Recipes</h2>
+<%= render 'layouts/navbar' %> 
 
-<ul>
-  <% @public_recipes.each do |recipe| %>
-    <li class="row">
-      <a href=<%= "recipes/#{recipe.id}" %>>      
-        <div>
-          <h3><%= recipe.name %></h3>
-          <p>by: <%= recipe.user.name %></p>
-        </div>
-        <div>
-          <h3>Total food: <%= recipe.recipe_food.length %></h3>
-          <p>Total price: <%= RecipeFood.total_price(recipe.recipe_food) %>$</p>
-        </div>
-      </a>
-    </li>
-  <% end %>
-</ul>
+<section class="flex-center column public-recipes">
+  <h2>Public Recipes</h2>
+  <ul class="max-width flex-center column">
+    <% @public_recipes.each do |recipe| %>
+      <li class="row">
+        <%= render partial:"public_recipes/public_recipe", locals: {recipe: recipe} %>
+      </li>
+    <% end %>
+  </ul>
+</section>

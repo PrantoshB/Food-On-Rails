@@ -13,7 +13,6 @@ RSpec.describe RecipeFoodsController, type: :system do
     @ingredient ||= RecipeFood.create(recipe: @recipe, food: @food, quantity: 1)
   end
 
-
   it 'can see the add ingrediant page' do
     authentificate_test_user
     expect(page).to have_content('Log Out')

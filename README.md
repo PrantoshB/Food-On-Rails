@@ -118,7 +118,7 @@ To run tests, run the following command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Create apiv1 end-point**
-- [ ] **use OAuth**
+- [ ] **Use OAuth**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

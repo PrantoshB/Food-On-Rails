@@ -15,12 +15,7 @@ test:
   database: foodonrails_test
 
 production:
-  production:
-  adapter: postgresql
-  encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: <%= ENV['DATABASE_NAME'] %>
-  username: <%= ENV['DATABASE_USERNAME'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
-  host: <%= ENV['DATABASE_HOST'] %>
-  port: <%= ENV['DATABASE_PORT'] %>
+  <<: *default
+  database: foodonrails_production
+  username: foodonrails
+  password: <%= ENV["FOODONRAILS_DATABASE_PASSWORD"] %>

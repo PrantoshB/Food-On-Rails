@@ -1,22 +1,40 @@
 require 'rails_helper'
 
 RSpec.describe RecipeFood, type: :model do
-  subject do
-    @user = User.create(name: 'Prantosh')
-    @food = Food.create(name: 'Salt', measurement_unit: 'gram', price: 1, quantity: 3, user_id: @user.id)
-    @recipe = Recipe.create(name: 'Pasta', preparation_time: 3, cooking_time: 1, description: 'You know how',
-                            public: true, user_id: @user.id)
-    @recipe_food = RecipeFood.create(quantity: 3, food_id: @food.id, recipe_id: @recipe.id)
-  end
+  before(:all) do
+    @user = User.first
+    @user ||= User.create(name: 'Prantosh')
 
-  before { subject.save }
+    @food = Food.first
+    @food ||= Food.create(name: 'Salt', measurement_unit: 'gram', price: 2, quantity: 3, user_id: @user.id)
+    @recipe = Recipe.first
+    @recipe ||= Recipe.create(name: 'Pasta', preparation_time: 3, cooking_time: 1, description: 'You know how',
+                              public: true, user_id: @user.id)
+    @recipe_food = RecipeFood.includes(:food).first
+    @recipe_food ||= RecipeFood.create(quantity: 10, food_id: @food.id, recipe_id: @recipe.id)
+  end
 
   it 'Quantity should be present' do
-    subject.quantity = nil
-    expect(subject).to_not be_valid
+    @recipe_food.quantity = nil
+    expect(@recipe_food).to_not be_valid
   end
 
-  it 'Quantity should have valid value' do
-    expect(subject.quantity).to eql 3
+  it 'test value method' do
+    # 10(quantity) x 2 (price) = 20
+    recipe_food = RecipeFood.includes(:food).first
+    expect(recipe_food.value).to eql 20
+  end
+
+  it 'test total_price method' do
+    # for only one food total price = 20
+    recipe_food = RecipeFood.includes(:food).first
+    expect(recipe_food.value).to eql 20
+  end
+
+  it 'test shopping list method' do
+    recipe_food = RecipeFood.includes(:food).first
+    shop_list = RecipeFood.shopping_list(@user)
+    expect(shop_list.length).to eql 1
+    expect(shop_list.first.food.name).to eql recipe_food.food.name
   end
 end

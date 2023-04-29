@@ -1,13 +1,31 @@
 <a name="readme-top"></a>
+<h1 align='center'> Food On Rails 🥙 </h1>
 
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [Food-On-Rails](#food-on-rails)
+- [🥙 Food On Rails ](#-Food-On_Rails-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [❓ FAQ ](#-faq-)
+  - [📝 License ](#-license-)
 
-# Food-On-Rails
+<!-- PROJECT DESCRIPTION -->
 
-**Food-On-Rail** is a fully functional website that allows users 
+# 🥙 Food On Rails <a name="about-project"></a>
+
+Food-On-Rails is a website that allows users to manage their food inventory and create and publish recipes. Authentication and authorization are implemented using the Devise and CanCanCan gems respectively. Built with Ruby On Rails programming language and PostgreSql database. The website provides an intuitive interface for users to easily add food items to their inventory and create and share recipes with others. It's a perfect solution for food enthusiasts looking to organize their ingredients and discover new recipes.
 
 ## 🛠 Built With <a name="built-with"></a>
 

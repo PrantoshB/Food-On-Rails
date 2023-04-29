@@ -1,13 +1,12 @@
 <%= render 'layouts/navbar' %> 
 
 <section class="recipe-details-container">
-  
   <div class="heading-text">
-      <h1> <%= @recipe.name %></h1>
+    <h1> <%= @recipe.name %></h1>
   </div>
-
-
 <div class="details-and-public-togl">
+
+<p class="notice"><%= notice %></p>
 
 <div class="recipe-details">
 
@@ -43,10 +42,10 @@
 <% if can? :destroy , @recipe %>
 <div class="btn-group row">
 <a href= <%= "/general_shopping_list" %>>
-  <button class="btn-bg-red-big ">Generate shopping list</button>
+  <button class="btn-bg-red-big ">Generate Shopping List</button>
 </a>
 <a href= <%= "/recipes/#{@recipe.id}/recipe_foods/new" %>>
-  <button class="btn-bg-red-big ">Add ingredient</button>
+  <button class="btn-bg-red-big ">Add Ingredient</button>
 </a>
 </div>
 <% end %>
@@ -58,22 +57,23 @@
       <th>Value</th>
       <th>Actions</th>
     </tr>
-  
     <% @recipe.recipe_food.each do |recipe_food| %>
-
+      <tr>
           <td><%= recipe_food.food.name %></td>
           <td><%= recipe_food.quantity %> <%= recipe_food.food.measurement_unit %></td>
           <td>$ <%= recipe_food.value %></td>
           <td>
           <% if can? :destroy , @recipe %>
           <div class="row btns">
-            <%= link_to "Modify", edit_recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), class: "btn-text" %>
+            <%= link_to "Modify", edit_recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), class: "btn-text btn-modify" %>
             <%= button_to "Remove", recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), class: "no-styling btn-text color-red", method: :delete %>
           </div>
           <% end %>
           </td>
-
+      </tr>
     <% end %>
+    <%= render partial: "shared/empty_list", locals: {list: @recipe.recipe_food} %>
+
 </table>
 
 

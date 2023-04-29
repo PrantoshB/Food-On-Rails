@@ -5,6 +5,7 @@
   width: 80%;
   margin: auto;
   z-index: 100;
+  padding: 2% 0;
 }
 
 .navbar-inner,
@@ -34,6 +35,6 @@ a {
 }
 
 .navbar img {
-  width: 34px;
-  height: 34px;
+  width: 55px;
+  height: 55px;
 }

@@ -41,6 +41,9 @@
       </li>
     <% end %>
   </ul>
+  <% if @public_recipes.length == 0 %>
+    <p class="flex-center column empty-list">Empty List </p>
+  <% end %>
 </section>
 
 <footer class="max-width row footer">

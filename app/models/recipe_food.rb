@@ -16,20 +16,21 @@ class RecipeFood < ApplicationRecord
   end
 
   def self.shopping_list(user)
-    recipe_foods = RecipeFood.joins(:food)
+    user_foods = Food.where(user: user)
+    food_ids = user_foods.map(&:id)
+  
+    recipe_foods = RecipeFood.where(food_id: food_ids)
+      .joins(:food)
       .select('recipe_foods.food_id, foods.name, foods.price, SUM(recipe_foods.quantity) as quantity')
       .group('recipe_foods.food_id, foods.name, foods.price')
-
-    user_foods = Food.where(user:)
-
+  
     shop_list = []
     recipe_foods.each do |recipe_food|
-      food = user_foods.select { |el| el.id == recipe_food.food_id }
-      if food.length == 1
-        food = food[0]
-        recipe_food.quantity -= food.quantity if food
+      food = user_foods.find { |el| el.id == recipe_food.food_id }
+      if food
+        recipe_food.quantity -= food.quantity
         recipe_food.price *= recipe_food.quantity
-
+  
         shop_list << recipe_food if recipe_food.quantity.positive?
       else
         shop_list << recipe_food

@@ -100,6 +100,15 @@ To run tests, run the following command:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Preview
+
+<details>
+  <summary>Preview</summary>
+  
+![image](https://github.com/PrantoshB/Food-On-Rails/assets/74411135/eb35ce28-8b63-4bdb-aa4f-f0c46e1a80dc)
+  
+</details>
+
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - **[Live Demo Link](https://food-on-rail.onrender.com/)**

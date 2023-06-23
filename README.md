@@ -48,7 +48,7 @@ Food-On-Rails is a website that allows users to manage their food inventory and 
 ### Key Features <a name="key-features"></a>
 
 - **Use database migrations**
-- **Food webapp**
+- **Food web app**
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -106,20 +106,31 @@ To run tests, run the following command:
   <summary>Preview</summary>
   
 ![image](https://github.com/PrantoshB/Food-On-Rails/assets/74411135/eb35ce28-8b63-4bdb-aa4f-f0c46e1a80dc)
+![image](https://github.com/PrantoshB/Food-On-Rails/assets/74411135/26571bf0-31d6-40d0-93ef-c63608314fd8)
+![image](https://github.com/PrantoshB/Food-On-Rails/assets/74411135/9e0f24f4-2923-48e4-9627-51abd49bd5d3)
+![image](https://github.com/PrantoshB/Food-On-Rails/assets/74411135/a68793ac-a063-4745-b824-28e9be763a5f)
+
+
   
 </details>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - **[Live Demo Link](https://food-on-rail.onrender.com/)**
+<details>
+  <summary>Test Account</summary>
+  -email: test@gmail.com
+  -password: test123
+</details>
 
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Dicko Allasane**
 
-- GitHub: [@githubhandle](https://github.com/Trast00)
-- Twitter: [@twitterhandle](https://twitter.com/AllassaneDicko0/)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/allassane-dicko-744aaa224)
+- GitHub: [@Trast00](https://github.com/Trast00)
+- Twitter: [@AllassaneDicko0](https://twitter.com/AllassaneDicko0/)
+- LinkedIn: [allassane-dicko](https://www.linkedin.com/in/dickoallassane/)
+- Portfolio: [dickoallassane.dev](https://dickoallassane.dev/)
 
 ### 👤 Prantosh Biswas
 

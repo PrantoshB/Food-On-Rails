@@ -21,7 +21,6 @@
   - [❓ FAQ ](#-faq-)
   - [📝 License ](#-license-)
 
-<!-- PROJECT DESCRIPTION -->
 
 # 🥙 Food On Rails <a name="about-project"></a>
 
